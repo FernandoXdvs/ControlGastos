@@ -8,9 +8,9 @@ const Balance = () => {
     const total = amounts.reduce((acc, item) => (acc += item), 0);
 
     return (
-        <div>
+        <div className="flex justify-between items-center">
             <h3>Tu Balance :</h3>
-            <h1>${total}</h1>
+            <h1 className="text-2xl">${total}</h1>
         </div>
     );
 }

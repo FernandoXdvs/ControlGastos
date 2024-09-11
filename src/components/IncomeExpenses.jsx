@@ -7,19 +7,21 @@ const IncomeExpenses = () => {
 
     const income = amounts
         .filter(item => item > 0)
-        .reduce((acc, item) => (acc += item), 0);
+        .reduce((acc, item) => (acc += item), 0)
+        .toFixed(2);
 
     const expense = amounts
         .filter(item => item < 0)
-        .reduce((acc, item) => (acc += item), 0) * -1;
+        .reduce((acc, item) => (acc += item), 0)
+        .toFixed(2) * -1;
 
     return (
         <>
-            <div>
+            <div className="flex justify-between my2">
                 <h4>Ingresos</h4>
                 <p>{income}</p>
             </div>
-            <div>
+            <div className="flex justify-between my2">
                 <h4>Gastos</h4>
                 <p>{expense}</p>
             </div>
